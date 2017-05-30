@@ -15,3 +15,5 @@ Once the server starts listening to port 5000, go to http://googleads.github.io/
 
 + try `http://localhost:5000/inline` to test inline VAST
 + try `http://localhost:5000/wrapper` to test VAST wrapper
+
+![Events Triggered](events-triggered.png)
