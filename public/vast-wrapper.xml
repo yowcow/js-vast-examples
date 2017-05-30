@@ -40,6 +40,13 @@
                ]]>
               </Tracking>
             </TrackingEvents>
+            <VideoClicks>
+              <ClickTracking>
+                <![CDATA[
+                  http://localhost:5000/event?source=wrapper&type=videoClick
+                ]]>
+              </ClickTracking>
+            </VideoClicks>
           </Linear>
         </Creative>
       </Creatives>
