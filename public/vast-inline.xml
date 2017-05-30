@@ -1,0 +1,59 @@
+<VAST version="3.0">
+  <Ad id="1234">
+    <InLine>
+      <AdSystem>fl</AdSystem>
+      <AdTitle>Inline VAST</AdTitle>
+      <Error>
+        <![CDATA[
+          http://localhost:5000/event?source=inline&type=error
+        ]]>
+      </Error>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=inline&type=impression
+        ]]>
+      </Impression>
+      <Creatives>
+        <Creative id="2345" sequence="1">
+          <Linear skipoffset="00:00:05">
+            <Duration>00:00:30</Duration>
+            <TrackingEvents>
+              <Tracking event="start">
+               <![CDATA[
+                 http://localhost:5000/event?source=inline&type=start
+               ]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=inline&type=firstQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="midpoint">
+               <![CDATA[
+                 http://localhost:5000/event?source=inline&type=midpoint
+               ]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=inline&type=thirdQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="complete">
+               <![CDATA[
+                 http://localhost:5000/event?source=inline&type=complete
+               ]]>
+              </Tracking>
+            </TrackingEvents>
+            <MediaFiles>
+              <MediaFile id="hoge" delivery="progressive" with="640" height="360" type="video/mp4" bitrate="122" scalable="true" maintainAspectRatio="true">
+                <![CDATA[
+                  http://localhost:5000/files/file-640x360.mp4
+                ]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

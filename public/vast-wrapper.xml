@@ -1,0 +1,48 @@
+<VAST version="3.0">
+  <Ad>
+    <Wrapper>
+      <AdSystem>fl</AdSystem>
+      <VASTAdTagURI><![CDATA[
+        http://localhost:5000/inline
+      ]]></VASTAdTagURI>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=wrapper&type=impression
+        ]]>
+      </Impression>
+      <Creatives>
+        <Creative id="9876" sequence="1">
+          <Linear>
+            <TrackingEvents>
+              <Tracking event="start">
+                <![CDATA[
+                  http://localhost:5000/event?source=wrapper&type=start
+                ]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=wrapper&type=firstQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="midpoint">
+               <![CDATA[
+                 http://localhost:5000/event?source=wrapper&type=midpoint
+               ]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=wrapper&type=thirdQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="complete">
+               <![CDATA[
+                 http://localhost:5000/event?source=wrapper&type=complete
+               ]]>
+              </Tracking>
+            </TrackingEvents>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </Wrapper>
+  </Ad>
+</VAST>
