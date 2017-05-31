@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/yowcow/js-vast-examples.svg?branch=master)](https://travis-ci.org/yowcow/js-vast-examples)
+
 VAST Server Example
 ===================
 
