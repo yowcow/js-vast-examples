@@ -1,4 +1,4 @@
-.PHONY: install run clean
+.PHONY: install run test clean
 
 all: install public/files/file-640x360.mp4
 
@@ -13,6 +13,9 @@ public/files:
 
 run:
 	node app.js
+
+test:
+	./node_modules/.bin/mocha
 
 clean:
 	rm -rf public/files
