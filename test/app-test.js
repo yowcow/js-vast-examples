@@ -37,7 +37,10 @@ describe("POST /bid", () => {
     .send({
       id: "some-bid-id",
       imp: [
-        { id: "some-imp-id" }
+        {
+          id: "some-imp-id",
+          tagid: "some-tag-id"
+        }
       ]
     })
     .expect(200)
@@ -45,6 +48,7 @@ describe("POST /bid", () => {
     .expect(res => {
       const data = res.body
       expect(data.id).toEqual("some-bid-id")
+      expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
     })
     .end(done)
   })
