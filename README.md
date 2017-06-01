@@ -6,7 +6,7 @@ VAST Server Example
 HOW TO USE
 ----------
 
-Have Node.js ready and then:
+Have Docker ready and then:
 
 ```
 % make
