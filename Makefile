@@ -37,7 +37,7 @@ test:
 		-v "$$PWD:$(APP_PATH)" \
 		-w $(APP_PATH) \
 		$(IMAGE_NAME) \
-		./node_modules/.bin/mocha
+		npm test
 
 clean:
 	rm -rf public/files node_modules
