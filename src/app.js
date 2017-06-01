@@ -37,7 +37,6 @@ const buildApp = ({ enableLogging = false }) => {
   app.use("/files", express.static("public/files"))
 
   app.get("/event", (req, res) => {
-    console.log((new Date()).toISOString() + `: Event ${req.query.type} triggered. (source: ${req.query.source})`)
     res.json({hoge: "fuga"})
   })
 
@@ -51,8 +50,12 @@ const buildApp = ({ enableLogging = false }) => {
 
   app.post("/bid", bodyParser.json(), (req, res) => {
     const bidData = req.body
+
+    console.log(bidData)
+
     const bidId = bidData.id
     const impId = bidData.imp[0].tagid
+
     slurpFile("public/vast-wrapper.xml", data => {
       res.json({
         id: bidId,
