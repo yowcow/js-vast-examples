@@ -7,8 +7,8 @@ CONTAINER_NAME := vast-server
 all: install public/files/file-640x360.mp4
 
 install:
-	docker run --rm \
-		--name $(CONTAINER_NAME) \
+	docker run -it --rm \
+		--name $(CONTAINER_NAME)-install \
 		-v "$$PWD":$(APP_PATH) \
 		-w $(APP_PATH) \
 		$(IMAGE_NAME) \
