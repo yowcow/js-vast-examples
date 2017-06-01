@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser")
 const express    = require("express")
 const fs         = require("fs")
+const morgan     = require("morgan")
 const url        = require("url")
 
 const app = express()
@@ -27,6 +28,7 @@ const slurpFile = (filepath, cb) => {
   })
 }
 
+app.use(morgan("combined"))
 app.use(respondCorHeaders)
 
 app.use("/files", express.static("public/files"))
