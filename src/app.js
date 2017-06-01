@@ -4,8 +4,6 @@ const fs         = require("fs")
 const morgan     = require("morgan")
 const url        = require("url")
 
-const app = express()
-
 const respondXml = (req, res, next) => {
   res.append("Content-Type", "text/xml; charset=utf8")
   next()
@@ -28,47 +26,55 @@ const slurpFile = (filepath, cb) => {
   })
 }
 
-app.use(morgan("combined"))
-app.use(respondCorHeaders)
+const buildApp = ({ enableLogging = false }) => {
+  const app = express()
 
-app.use("/files", express.static("public/files"))
+  if (enableLogging) {
+    app.use(morgan("combined"))
+  }
 
-app.get("/event", (req, res) => {
-  console.log((new Date()).toISOString() + `: Event ${req.query.type} triggered. (source: ${req.query.source})`)
-  res.json({hoge: "fuga"})
-})
+  app.use(respondCorHeaders)
+  app.use("/files", express.static("public/files"))
 
-app.get("/inline", respondXml, (req, res) => {
-  slurpFile("public/vast-inline.xml", data => res.send(data))
-})
+  app.get("/event", (req, res) => {
+    console.log((new Date()).toISOString() + `: Event ${req.query.type} triggered. (source: ${req.query.source})`)
+    res.json({hoge: "fuga"})
+  })
 
-app.get("/wrapper", respondXml, (req, res) => {
-  slurpFile("public/vast-wrapper.xml", data => res.send(data))
-})
+  app.get("/inline", respondXml, (req, res) => {
+    slurpFile("public/vast-inline.xml", data => res.send(data))
+  })
 
-app.post("/bid", bodyParser.json(), (req, res) => {
-  const bidData = req.body
-  const bidId = bidData.id
-  const impId = bidData.imp[0].tagid
-  slurpFile("public/vast-wrapper.xml", data => {
-    res.json({
-      id: bidId,
-      cur: "JPY",
-      seatbid: [
-        {
-          seat: "test",
-          bid: [
-            {
-              impid: impId,
-              price: 123,
-              adm: data,
-              adomain: ["localhost"]
-            }
-          ]
-        }
-      ]
+  app.get("/wrapper", respondXml, (req, res) => {
+    slurpFile("public/vast-wrapper.xml", data => res.send(data))
+  })
+
+  app.post("/bid", bodyParser.json(), (req, res) => {
+    const bidData = req.body
+    const bidId = bidData.id
+    const impId = bidData.imp[0].tagid
+    slurpFile("public/vast-wrapper.xml", data => {
+      res.json({
+        id: bidId,
+        cur: "JPY",
+        seatbid: [
+          {
+            seat: "test",
+            bid: [
+              {
+                impid: impId,
+                price: 123,
+                adm: data,
+                adomain: ["localhost"]
+              }
+            ]
+          }
+        ]
+      })
     })
   })
-})
 
-module.exports = app
+  return app
+}
+
+module.exports = { buildApp: buildApp }

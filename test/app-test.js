@@ -1,6 +1,8 @@
 const expect  = require("expect")
 const request = require("supertest")
-const app     = require("../src/app")
+
+const { buildApp } = require("../src/app")
+const app = buildApp({})
 
 describe("GET /inline", () => {
   it("should return XML", done => {
