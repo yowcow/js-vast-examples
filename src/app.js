@@ -52,7 +52,7 @@ const buildApp = ({ enableLogging = false }) => {
     const bidData = req.body
 
     if (enableLogging) {
-      console.log(bidData)
+      console.log(JSON.stringify(bidData, null, 2))
     }
 
     const bidId = bidData.id
