@@ -51,10 +51,19 @@ const buildApp = ({ enableLogging = false }) => {
   app.post("/bid", bodyParser.json(), (req, res) => {
     const bidData = req.body
 
-    console.log(bidData)
+    if (enableLogging) {
+      console.log(bidData)
+    }
 
     const bidId = bidData.id
-    const impId = bidData.imp[0].tagid
+    const imp   = bidData.imp[0]
+
+    if (!imp.video) {
+      res.status(204).end()
+      return
+    }
+
+    const tagId = imp.tagid
 
     slurpFile("public/vast-wrapper.xml", data => {
       res.json({
@@ -65,7 +74,7 @@ const buildApp = ({ enableLogging = false }) => {
             seat: "test",
             bid: [
               {
-                impid: impId,
+                impid: tagId,
                 price: 123,
                 adm: data,
                 adomain: ["localhost"]

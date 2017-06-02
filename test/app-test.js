@@ -33,7 +33,7 @@ describe("GET /wrapper", () => {
 })
 
 describe("POST /bid", () => {
-  it("should return JSON", done => {
+  it("should return 200 with JSON when 'video' exists", done => {
     request(app)
     .post("/bid")
     .send({
@@ -41,7 +41,11 @@ describe("POST /bid", () => {
       imp: [
         {
           id: "some-imp-id",
-          tagid: "some-tag-id"
+          tagid: "some-tag-id",
+          video: {
+            w: 640,
+            h: 480
+          }
         }
       ]
     })
@@ -52,6 +56,22 @@ describe("POST /bid", () => {
       expect(data.id).toEqual("some-bid-id")
       expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
     })
+    .end(done)
+  })
+
+  it("should return 204 when no 'video' exists", done => {
+    request(app)
+    .post("/bid")
+    .send({
+      id: "some-bid-id",
+      imp: [
+        {
+          id: "some-imp-id",
+          tagid: "some-tag-id",
+        }
+      ]
+    })
+    .expect(204)
     .end(done)
   })
 })
