@@ -48,6 +48,10 @@ const buildApp = ({ enableLogging = false }) => {
     slurpFile("public/vast-wrapper.xml", data => res.send(data))
   })
 
+  app.get("/nonlinear-inline", respondXml, (req, res) => {
+    slurpFile("public/vast-nonlinear-inline.xml", data => res.send(data))
+  })
+
   app.post("/bid", bodyParser.json(), (req, res) => {
     const bidData = req.body
 

@@ -1,0 +1,91 @@
+<VAST version="2.0">
+  <Ad id="2345">
+    <InLine>
+      <AdSystem>Hoge</AdSystem>
+      <Error>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear&type=error
+        ]]>
+      </Error>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear&type=impression
+        ]]>
+      </Impression>
+      <Creatives>
+        <Creative AdID="hoge-nonlinear">
+          <NonLinearAds>
+            <TrackingEvents>
+              <Tracking event="creativeView">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=creativeView
+               ]]>
+              </Tracking>
+              <Tracking event="expand">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=expand
+               ]]>
+              </Tracking>
+              <Tracking event="collapse">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=collapse
+               ]]>
+              </Tracking>
+              <Tracking event="acceptInvitation">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=acceptInvitation
+               ]]>
+              </Tracking>
+              <Tracking event="close">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=close
+               ]]>
+              </Tracking>
+              <Tracking event="start">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=start
+               ]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=firstQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="midpoint">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=midpoint
+               ]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=thirdQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="complete">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear&type=complete
+               ]]>
+              </Tracking>
+            </TrackingEvents>
+            <NonLinear height="50" width="300" minSuggestedDuration="00:00:15">
+              <StaticResource creativeType="image/jpeg">
+                http://localhost:5000/files/50x300_static.jpg
+              </StaticResource>
+              <NonLinearClickThrough>
+                http://localhost:5000/files/index.html?from=300x50
+              </NonLinearClickThrough>
+            </NonLinear>
+            <NonLinear height="50" width="450" minSuggestedDuration="00:00:20">
+              <StaticResource creativeType="image/jpeg">
+                http://localhost:5000/files/50x450_static.jpg
+              </StaticResource>
+              <NonLinearClickThrough>
+                http://localhost:5000/files/index.html?from=450x50
+              </NonLinearClickThrough>
+            </NonLinear>
+          </NonLinearAds>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
