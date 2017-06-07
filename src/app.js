@@ -52,6 +52,10 @@ const buildApp = ({ enableLogging = false }) => {
     slurpFile("public/vast-nonlinear-inline.xml", data => res.send(data))
   })
 
+  app.get("/nonlinear-wrapper", respondXml, (req, res) => {
+    slurpFile("public/vast-nonlinear-wrapper.xml", data => res.send(data))
+  })
+
   app.post("/bid", bodyParser.json(), (req, res) => {
     const bidData = req.body
 
@@ -68,14 +72,17 @@ const buildApp = ({ enableLogging = false }) => {
     }
 
     const tagId = imp.tagid
+    const xmlFile = imp.video.linearity == 1 ?
+      "public/vast-wrapper.xml" :
+      "public/vast-nonlinear-wrapper.xml"
 
-    slurpFile("public/vast-wrapper.xml", data => {
+    slurpFile(xmlFile, data => {
       res.json({
         id: bidId,
         cur: "JPY",
         seatbid: [
           {
-            seat: "test",
+            seat: `file-${xmlFile}`,
             bid: [
               {
                 impid: tagId,

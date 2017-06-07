@@ -1,0 +1,75 @@
+<VAST version="2.0">
+  <Ad id="3456">
+    <Wrapper>
+      <AdSystem>Hoge</AdSystem>
+      <VASTAdTagURI>
+        <![CDATA[
+          http://localhost:5000/nonlinear-inline
+        ]]>
+      </VASTAdTagURI>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear-wrapper&type=impression
+        ]]>
+      </Impression>
+      <Creatives>
+        <Creative AdID="hoge-nonlinear-wrapper">
+          <NonLinearAds>
+            <TrackingEvents>
+              <Tracking event="creativeView">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=creativeView
+               ]]>
+              </Tracking>
+              <Tracking event="expand">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=expand
+               ]]>
+              </Tracking>
+              <Tracking event="collapse">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=collapse
+               ]]>
+              </Tracking>
+              <Tracking event="acceptInvitation">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=acceptInvitation
+               ]]>
+              </Tracking>
+              <Tracking event="close">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=close
+               ]]>
+              </Tracking>
+              <Tracking event="start">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=start
+               ]]>
+              </Tracking>
+              <Tracking event="firstQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=firstQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="midpoint">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=midpoint
+               ]]>
+              </Tracking>
+              <Tracking event="thirdQuartile">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=thirdQuartile
+               ]]>
+              </Tracking>
+              <Tracking event="complete">
+               <![CDATA[
+                 http://localhost:5000/event?source=nonlinear-wrapper&type=complete
+               ]]>
+              </Tracking>
+            </TrackingEvents>
+          </NonLinearAds>
+        </Creative>
+      </Creatives>
+    </Wrapper>
+  </Ad>
+</VAST>

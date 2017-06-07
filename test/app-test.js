@@ -32,8 +32,30 @@ describe("GET /wrapper", () => {
   })
 })
 
+describe("GET /nonlinear-inline", () => {
+  it("should return XML", done => {
+    request(app)
+    .get("/nonlinear-inline")
+    .set("Referer", "http://foobar.com/foo/bar")
+    .expect(200)
+    .expect("Content-Type", /text\/xml/)
+    .end(done)
+  })
+})
+
+describe("GET /nonlinear-wrapper", () => {
+  it("should return XML", done => {
+    request(app)
+    .get("/nonlinear-wrapper")
+    .set("Referer", "http://foobar.com/foo/bar")
+    .expect(200)
+    .expect("Content-Type", /text\/xml/)
+    .end(done)
+  })
+})
+
 describe("POST /bid", () => {
-  it("should return 200 with JSON when 'video' exists", done => {
+  it("should return 200 with linear ad in JSON when 'linearity: 1'", done => {
     request(app)
     .post("/bid")
     .send({
@@ -44,7 +66,8 @@ describe("POST /bid", () => {
           tagid: "some-tag-id",
           video: {
             w: 640,
-            h: 480
+            h: 480,
+            linearity: 1
           }
         }
       ]
@@ -55,6 +78,35 @@ describe("POST /bid", () => {
       const data = res.body
       expect(data.id).toEqual("some-bid-id")
       expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
+      expect(data.seatbid[0].seat).toEqual("file-public/vast-wrapper.xml")
+    })
+    .end(done)
+  })
+
+  it("should return 200 with non-linear ad in JSON when 'linearity: 2'", done => {
+    request(app)
+    .post("/bid")
+    .send({
+      id: "some-bid-id",
+      imp: [
+        {
+          id: "some-imp-id",
+          tagid: "some-tag-id",
+          video: {
+            w: 640,
+            h: 480,
+            linearity: 2
+          }
+        }
+      ]
+    })
+    .expect(200)
+    .expect("Content-Type", /application\/json/)
+    .expect(res => {
+      const data = res.body
+      expect(data.id).toEqual("some-bid-id")
+      expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
+      expect(data.seatbid[0].seat).toEqual("file-public/vast-nonlinear-wrapper.xml")
     })
     .end(done)
   })
