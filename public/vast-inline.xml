@@ -5,22 +5,22 @@
       <AdTitle>Inline VAST</AdTitle>
       <Error>
         <![CDATA[
-          http://localhost:5000/event?source=inline&type=error
+          http://localhost:5000/event?source=inline&type=error&error=[ERRORCODE]
         ]]>
       </Error>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=inline&type=impression1
+          http://localhost:5000/event?source=inline&type=impression1&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=inline&type=impression2
+          http://localhost:5000/event?source=inline&type=impression2&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=inline&type=impression3
+          http://localhost:5000/event?source=inline&type=impression3&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Creatives>
@@ -30,82 +30,82 @@
             <TrackingEvents>
               <Tracking event="creativeView">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=creativeView
+                  http://localhost:5000/event?source=inline&type=creativeView&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="start">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=start
+                  http://localhost:5000/event?source=inline&type=start&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="firstQuartile">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=firstQuartile
+                  http://localhost:5000/event?source=inline&type=firstQuartile&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="midpoint">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=midpoint
+                  http://localhost:5000/event?source=inline&type=midpoint&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="thirdQuartile">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=thirdQuartile
+                  http://localhost:5000/event?source=inline&type=thirdQuartile&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="complete">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=complete
+                  http://localhost:5000/event?source=inline&type=complete&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="mute">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=mute
+                  http://localhost:5000/event?source=inline&type=mute&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="unmute">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=unmute
+                  http://localhost:5000/event?source=inline&type=unmute&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="pause">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=pause
+                  http://localhost:5000/event?source=inline&type=pause&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="rewind">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=rewind
+                  http://localhost:5000/event?source=inline&type=rewind&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="resume">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=resume
+                  http://localhost:5000/event?source=inline&type=resume&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="fullscreen">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=fullscreen
+                  http://localhost:5000/event?source=inline&type=fullscreen&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="expand">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=expand
+                  http://localhost:5000/event?source=inline&type=expand&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="collapse">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=collapse
+                  http://localhost:5000/event?source=inline&type=collapse&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="acceptInvitation">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=acceptInvitation
+                  http://localhost:5000/event?source=inline&type=acceptInvitation&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="close">
                 <![CDATA[
-                  http://localhost:5000/event?source=inline&type=close
+                  http://localhost:5000/event?source=inline&type=close&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
             </TrackingEvents>

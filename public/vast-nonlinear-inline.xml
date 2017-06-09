@@ -4,22 +4,22 @@
       <AdSystem>Hoge</AdSystem>
       <Error>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear&type=error
+          http://localhost:5000/event?source=nonlinear-inline&type=error&error=[ERRORCODE]
         ]]>
       </Error>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear&type=impression1
+          http://localhost:5000/event?source=nonlinear-inline&type=impression1&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear&type=impression2
+          http://localhost:5000/event?source=nonlinear-inline&type=impression2&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear&type=impression3
+          http://localhost:5000/event?source=nonlinear-inline&type=impression3&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
         ]]>
       </Impression>
       <Creatives>
@@ -28,82 +28,82 @@
             <TrackingEvents>
               <Tracking event="creativeView">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=creativeView
+                  http://localhost:5000/event?source=nonlinear-inline&type=creativeView&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="start">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=start
+                  http://localhost:5000/event?source=nonlinear-inline&type=start&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="firstQuartile">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=firstQuartile
+                  http://localhost:5000/event?source=nonlinear-inline&type=firstQuartile&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="midpoint">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=midpoint
+                  http://localhost:5000/event?source=nonlinear-inline&type=midpoint&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="thirdQuartile">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=thirdQuartile
+                  http://localhost:5000/event?source=nonlinear-inline&type=thirdQuartile&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="complete">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=complete
+                  http://localhost:5000/event?source=nonlinear-inline&type=complete&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="mute">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=mute
+                  http://localhost:5000/event?source=nonlinear-inline&type=mute&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="unmute">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=unmute
+                  http://localhost:5000/event?source=nonlinear-inline&type=unmute&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="pause">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=pause
+                  http://localhost:5000/event?source=nonlinear-inline&type=pause&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="rewind">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=rewind
+                  http://localhost:5000/event?source=nonlinear-inline&type=rewind&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="resume">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=resume
+                  http://localhost:5000/event?source=nonlinear-inline&type=resume&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="fullscreen">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=fullscreen
+                  http://localhost:5000/event?source=nonlinear-inline&type=fullscreen&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="expand">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=expand
+                  http://localhost:5000/event?source=nonlinear-inline&type=expand&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="collapse">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=collapse
+                  http://localhost:5000/event?source=nonlinear-inline&type=collapse&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="acceptInvitation">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=acceptInvitation
+                  http://localhost:5000/event?source=nonlinear-inline&type=acceptInvitation&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
               <Tracking event="close">
                 <![CDATA[
-                  http://localhost:5000/event?source=nonlinear-inline&type=close
+                  http://localhost:5000/event?source=nonlinear-inline&type=close&contentplayhead=[CONTENTPLAYHEAD]&cachebusting=[CACHEBUSTING]&asseturi=[ASSETURI]
                 ]]>
               </Tracking>
             </TrackingEvents>
