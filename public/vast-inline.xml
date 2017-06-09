@@ -18,30 +18,85 @@
           <Linear skipoffset="00:00:05">
             <Duration>00:00:30</Duration>
             <TrackingEvents>
+              <Tracking event="creativeView">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=creativeView
+                ]]>
+              </Tracking>
               <Tracking event="start">
-               <![CDATA[
-                 http://localhost:5000/event?source=inline&type=start
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=start
+                ]]>
               </Tracking>
               <Tracking event="firstQuartile">
-               <![CDATA[
-                 http://localhost:5000/event?source=inline&type=firstQuartile
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=firstQuartile
+                ]]>
               </Tracking>
               <Tracking event="midpoint">
-               <![CDATA[
-                 http://localhost:5000/event?source=inline&type=midpoint
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=midpoint
+                ]]>
               </Tracking>
               <Tracking event="thirdQuartile">
-               <![CDATA[
-                 http://localhost:5000/event?source=inline&type=thirdQuartile
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=thirdQuartile
+                ]]>
               </Tracking>
               <Tracking event="complete">
-               <![CDATA[
-                 http://localhost:5000/event?source=inline&type=complete
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=complete
+                ]]>
+              </Tracking>
+              <Tracking event="mute">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=mute
+                ]]>
+              </Tracking>
+              <Tracking event="unmute">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=unmute
+                ]]>
+              </Tracking>
+              <Tracking event="pause">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=pause
+                ]]>
+              </Tracking>
+              <Tracking event="rewind">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=rewind
+                ]]>
+              </Tracking>
+              <Tracking event="resume">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=resume
+                ]]>
+              </Tracking>
+              <Tracking event="fullscreen">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=fullscreen
+                ]]>
+              </Tracking>
+              <Tracking event="expand">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=expand
+                ]]>
+              </Tracking>
+              <Tracking event="collapse">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=collapse
+                ]]>
+              </Tracking>
+              <Tracking event="acceptInvitation">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=acceptInvitation
+                ]]>
+              </Tracking>
+              <Tracking event="close">
+                <![CDATA[
+                  http://localhost:5000/event?source=inline&type=close
+                ]]>
               </Tracking>
             </TrackingEvents>
             <VideoClicks>

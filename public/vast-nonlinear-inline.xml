@@ -17,54 +17,84 @@
           <NonLinearAds>
             <TrackingEvents>
               <Tracking event="creativeView">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=creativeView
-               ]]>
-              </Tracking>
-              <Tracking event="expand">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=expand
-               ]]>
-              </Tracking>
-              <Tracking event="collapse">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=collapse
-               ]]>
-              </Tracking>
-              <Tracking event="acceptInvitation">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=acceptInvitation
-               ]]>
-              </Tracking>
-              <Tracking event="close">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=close
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=creativeView
+                ]]>
               </Tracking>
               <Tracking event="start">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=start
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=start
+                ]]>
               </Tracking>
               <Tracking event="firstQuartile">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=firstQuartile
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=firstQuartile
+                ]]>
               </Tracking>
               <Tracking event="midpoint">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=midpoint
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=midpoint
+                ]]>
               </Tracking>
               <Tracking event="thirdQuartile">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=thirdQuartile
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=thirdQuartile
+                ]]>
               </Tracking>
               <Tracking event="complete">
-               <![CDATA[
-                 http://localhost:5000/event?source=nonlinear&type=complete
-               ]]>
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=complete
+                ]]>
+              </Tracking>
+              <Tracking event="mute">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=mute
+                ]]>
+              </Tracking>
+              <Tracking event="unmute">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=unmute
+                ]]>
+              </Tracking>
+              <Tracking event="pause">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=pause
+                ]]>
+              </Tracking>
+              <Tracking event="rewind">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=rewind
+                ]]>
+              </Tracking>
+              <Tracking event="resume">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=resume
+                ]]>
+              </Tracking>
+              <Tracking event="fullscreen">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=fullscreen
+                ]]>
+              </Tracking>
+              <Tracking event="expand">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=expand
+                ]]>
+              </Tracking>
+              <Tracking event="collapse">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=collapse
+                ]]>
+              </Tracking>
+              <Tracking event="acceptInvitation">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=acceptInvitation
+                ]]>
+              </Tracking>
+              <Tracking event="close">
+                <![CDATA[
+                  http://localhost:5000/event?source=nonlinear-inline&type=close
+                ]]>
               </Tracking>
             </TrackingEvents>
             <NonLinear height="50" width="300" minSuggestedDuration="00:00:15">
