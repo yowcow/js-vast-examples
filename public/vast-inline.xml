@@ -10,7 +10,17 @@
       </Error>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=inline&type=impression
+          http://localhost:5000/event?source=inline&type=impression1
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=inline&type=impression2
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=inline&type=impression3
         ]]>
       </Impression>
       <Creatives>

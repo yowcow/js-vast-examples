@@ -9,7 +9,17 @@
       </Error>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear&type=impression
+          http://localhost:5000/event?source=nonlinear&type=impression1
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear&type=impression2
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear&type=impression3
         ]]>
       </Impression>
       <Creatives>

@@ -9,7 +9,17 @@
       </VASTAdTagURI>
       <Impression>
         <![CDATA[
-          http://localhost:5000/event?source=nonlinear-wrapper&type=impression
+          http://localhost:5000/event?source=nonlinear-wrapper&type=impression1
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear-wrapper&type=impression2
+        ]]>
+      </Impression>
+      <Impression>
+        <![CDATA[
+          http://localhost:5000/event?source=nonlinear-wrapper&type=impression3
         ]]>
       </Impression>
       <Creatives>
