@@ -100,4 +100,4 @@ const buildApp = ({ enableLogging = false }) => {
   return app
 }
 
-module.exports = { buildApp: buildApp }
+module.exports = { buildApp }
