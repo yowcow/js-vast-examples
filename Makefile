@@ -1,10 +1,13 @@
-.PHONY: install run test clean
+.PHONY: pull install run test clean
 
 APP_PATH       := /usr/src/app
 IMAGE_NAME     := node:latest
 CONTAINER_NAME := vast-server
 
-all: install public/files public/files/index.html public/files/file-640x360.mp4 public/files/50x300_static.jpg public/files/50x450_static.jpg
+all: pull install public/files public/files/index.html public/files/file-640x360.mp4 public/files/50x300_static.jpg public/files/50x450_static.jpg
+
+pull:
+	docker pull $(IMAGE_NAME)
 
 install:
 	docker run -it --rm \
