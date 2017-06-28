@@ -115,6 +115,11 @@
                   http://localhost:5000/event?source=inline&type=videoClick
                 ]]>
               </ClickTracking>
+              <ClickThrough>
+                <![CDATA[
+                    http://localhost:5000/files/index.html?from=inline
+                ]]>
+              </ClickThrough>
             </VideoClicks>
             <MediaFiles>
               <MediaFile id="hoge" delivery="progressive" with="640" height="360" type="video/mp4" bitrate="122" scalable="true" maintainAspectRatio="true">
