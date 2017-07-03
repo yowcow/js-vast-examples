@@ -78,7 +78,7 @@ const buildApp = ({ enableLogging = false }) => {
       cur: "JPY",
       seatbid: [
         {
-          seat: "wrapper",
+          seat: xmlPath,
           bid: [
             {
               impid: tagId,

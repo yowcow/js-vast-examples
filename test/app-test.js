@@ -78,7 +78,7 @@ describe("POST /bid", () => {
         const data = res.body
         expect(data.id).toEqual("some-bid-id")
         expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
-        expect(data.seatbid[0].seat).toEqual("file-public/vast-wrapper.xml")
+        expect(data.seatbid[0].seat).toEqual("/wrapper")
       })
       .end(done)
   })
@@ -106,7 +106,7 @@ describe("POST /bid", () => {
         const data = res.body
         expect(data.id).toEqual("some-bid-id")
         expect(data.seatbid[0].bid[0].impid).toEqual("some-tag-id")
-        expect(data.seatbid[0].seat).toEqual("file-public/vast-nonlinear-wrapper.xml")
+        expect(data.seatbid[0].seat).toEqual("/nonlinear-wrapper")
       })
       .end(done)
   })
