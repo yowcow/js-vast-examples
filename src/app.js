@@ -72,28 +72,23 @@ const buildApp = ({ enableLogging = false }) => {
     }
 
     const tagId = imp.tagid
-    const xmlFile = imp.video.linearity == 1 ?
-      "public/vast-wrapper.xml" :
-      "public/vast-nonlinear-wrapper.xml"
-
-    slurpFile(xmlFile, data => {
-      res.json({
-        id: bidId,
-        cur: "JPY",
-        seatbid: [
-          {
-            seat: `file-${xmlFile}`,
-            bid: [
-              {
-                impid: tagId,
-                price: 123,
-                adm: data,
-                adomain: ["localhost"]
-              }
-            ]
-          }
-        ]
-      })
+    const xmlPath = imp.video.linearity == 1 ? "/wrapper" : "/nonlinear-wrapper"
+    res.json({
+      id: bidId,
+      cur: "JPY",
+      seatbid: [
+        {
+          seat: "wrapper",
+          bid: [
+            {
+              impid: tagId,
+              price: 123,
+              adm: `http://localhost:5000${xmlPath}`,
+              adomain: ["localhost"]
+            }
+          ]
+        }
+      ]
     })
   })
 
