@@ -26,7 +26,7 @@
       <Creatives>
         <Creative id="2345" sequence="1">
           <Linear skipoffset="00:00:05">
-            <Duration>00:00:30</Duration>
+            <Duration>00:00:10</Duration>
             <TrackingEvents>
               <Tracking event="creativeView">
                 <![CDATA[
