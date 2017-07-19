@@ -4,6 +4,17 @@ const request = require("supertest")
 const { buildApp } = require("../src/app")
 const app = buildApp({})
 
+describe("GET /static/index.html", () => {
+  it("should return HTML", done => {
+    request(app)
+      .get("/static/index.html")
+      .expect(200)
+      .expect("Content-Type", /text\/html/)
+      .expect(res => expect(res.text).toMatch(/Hoge/))
+      .end(done)
+  })
+})
+
 describe("GET /inline", () => {
   it("should return XML", done => {
     request(app)

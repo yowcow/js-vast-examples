@@ -35,6 +35,7 @@ const buildApp = ({ enableLogging = false }) => {
 
   app.use(respondCorHeaders)
   app.use("/files", express.static("public/files"))
+  app.use("/static", express.static("public/static"))
 
   app.get("/event", (req, res) => {
     res.json({hoge: "fuga"})
